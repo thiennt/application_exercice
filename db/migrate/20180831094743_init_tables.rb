@@ -10,6 +10,7 @@ class InitTables < ActiveRecord::Migration[5.0]
 
     create_table :intercommunalities do |t|
       t.string :name
+      t.string :slug
       t.string :siren
       t.string :form
 

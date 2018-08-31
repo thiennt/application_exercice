@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20180831094743) do
 
   create_table "intercommunalities", force: :cascade do |t|
     t.string   "name"
+    t.string   "slug"
     t.string   "siren"
     t.string   "form"
     t.datetime "created_at", null: false
