@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20180831094743) do
   create_table "communes", force: :cascade do |t|
     t.integer  "intercommunality_id"
     t.string   "name"
+    t.string   "slug"
     t.string   "code_insee"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
@@ -32,7 +33,6 @@ ActiveRecord::Schema.define(version: 20180831094743) do
 
   create_table "intercommunalities", force: :cascade do |t|
     t.string   "name"
-    t.string   "slug"
     t.string   "siren"
     t.string   "form"
     t.datetime "created_at", null: false

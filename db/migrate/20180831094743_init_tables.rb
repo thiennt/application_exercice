@@ -4,6 +4,7 @@ class InitTables < ActiveRecord::Migration[5.0]
       t.belongs_to :intercommunality, index: true
       t.string :name
       t.string :code_insee
+      t.integer :population
 
       t.timestamps
     end

@@ -9,10 +9,14 @@ class Intercommunality < ApplicationRecord
   before_save :update_slug
 
   def update_slug
-    self.slug ||= self.name.parameterize
+    self.slug ||= self.name.try(:parameterize)
   end
 
   def communes_hash
     Hash[self.communes.collect { |commune| [commune.code_insee, commune.name] }]
+  end
+
+  def population
+    self.communes.sum(&:population)
   end
 end

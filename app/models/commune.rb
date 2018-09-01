@@ -7,5 +7,4 @@ class Commune < ApplicationRecord
 
   validates_presence_of :name, :code_insee
   validates_format_of :code_insee, :with => /\A[0-9]{5}\Z/
-  
 end
