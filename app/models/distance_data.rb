@@ -1,0 +1,2 @@
+class DistanceData < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class Thiennt < ApplicationRecord
+end
